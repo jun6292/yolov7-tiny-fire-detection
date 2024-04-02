@@ -16,7 +16,7 @@ from utils.datasets import letterbox
 from utils.general import non_max_suppression, make_divisible, scale_coords, increment_path, xyxy2xywh
 from utils.plots import color_list, plot_one_box
 from utils.torch_utils import time_synchronized
-
+from models.ops_dcnv3.modules import DCNv3
 
 ##### basic ####
 
@@ -2017,3 +2017,5 @@ class ST2CSPC(nn.Module):
         return self.cv4(torch.cat((y1, y2), dim=1))
 
 ##### end of swin transformer v2 #####   
+
+##### DCNv3 #####
