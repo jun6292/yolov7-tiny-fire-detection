@@ -93,7 +93,7 @@ head:
   
    [-1, 1, Conv, [64, 1, 1, None, 1, nn.LeakyReLU(0.1)]],
    [-1, 1, nn.Upsample, [None, 2, 'nearest']],
-   [18, 1, Conv, [64, 1, 1, None, 1, nn.LeakyReLU(0.1)]], # route backbone P3
+   [20, 1, Conv, [64, 1, 1, None, 1, nn.LeakyReLU(0.1)]], # route backbone P3
    [[-1, -2], 1, Concat, [1]],
    
   [-1, 1, Conv, [32, 1, 1, None, 1, nn.ReLU(1)]], # 67
@@ -107,7 +107,7 @@ head:
   [-1, 1, Conv, [64, 1, 1, None, 1, nn.LeakyReLU(0.1)]], # 75
    
    [-1, 1, Conv, [128, 3, 2, None, 1, nn.LeakyReLU(0.1)]],
-   [[-1, 57], 1, Concat, [1]],
+   [[-1, 62], 1, Concat, [1]],
    
   [-1, 1, Conv, [64, 1, 1, None, 1, nn.ReLU(1)]], # 78
   [-2, 1, Conv, [64, 1, 1, None, 1, nn.ReLU(1)]],
@@ -120,7 +120,7 @@ head:
   [-1, 1, Conv, [128, 1, 1, None, 1, nn.LeakyReLU(0.1)]], # 86
    
    [-1, 1, Conv, [256, 3, 2, None, 1, nn.LeakyReLU(0.1)]],
-   [[-1, 45], 1, Concat, [1]],
+   [[-1, 49], 1, Concat, [1]],
    
   [-1, 1, Conv, [128, 1, 1, None, 1, nn.ReLU(1)]], # 89
   [-2, 1, Conv, [128, 1, 1, None, 1, nn.ReLU(1)]],
@@ -136,5 +136,5 @@ head:
    [86, 1, Conv, [256, 3, 1, None, 1, nn.LeakyReLU(0.1)]], # 40x40
    [97, 1, Conv, [512, 3, 1, None, 1, nn.LeakyReLU(0.1)]], # 20x20
 
-   [[90,91,92], 1, IDetect, [nc, anchors]],   # Detect(P3, P4, P5)
+   [[98,99,100], 1, IDetect, [nc, anchors]],   # Detect(P3, P4, P5)
   ]
