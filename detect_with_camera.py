@@ -11,7 +11,7 @@ from utils.plots import plot_one_box
 from utils.torch_utils import select_device, time_synchronized
 
 
-WEIGHTS = 'yolov7_epoch50.pt'
+WEIGHTS = 'testtttttttt.pt'
 IMG_SIZE = 640
 DEVICE = ''
 AUGMENT = False
